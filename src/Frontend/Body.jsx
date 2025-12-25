@@ -25,7 +25,7 @@ function Body() {
       setLoading(true);
       setTrip(null);
 
-      const res = await axios.post("http://localhost:5000/api/travel", tour);
+      const res = await axios.post("https://trip-craft-backend.onrender.com/api/travel", tour);
 
       
       setTrip(res.data);
