@@ -22,7 +22,7 @@ function Contact() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/store",
+        "https://trip-craft-backend.onrender.com/api/store",
         form
       );
 
