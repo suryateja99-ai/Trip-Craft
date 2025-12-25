@@ -1,0 +1,82 @@
+.contact-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.contact-card h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.5rem;
+}
+
+.contact-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-card input,
+.contact-card textarea {
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+.contact-card textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+.contact-card input::placeholder,
+.contact-card textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-card button {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ffd166, #ff9f1c);
+  color: #1e293b;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 159, 28, 0.35);
+}
+
+.success-msg {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #ffd166;
+}

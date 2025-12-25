@@ -1,0 +1,125 @@
+.how-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  color: white;
+}
+
+.how-container {
+  max-width: 1000px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  border-radius: 28px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+  position: relative;
+}
+
+/* AI Badge */
+.ai-badge {
+  position: absolute;
+  top: -14px;
+  right: 20px;
+  background: linear-gradient(90deg, #ffd166, #ff9f1c);
+  color: #1e293b;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.how-container h1 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 0.6rem;
+  color: #ffd166;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.05rem;
+  margin-bottom: 2.8rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Steps Grid */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.6rem;
+}
+
+/* Step Card */
+.step-card {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  padding: 1.8rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(255, 209, 102, 0.18);
+}
+
+/* Icon */
+.step-icon {
+  font-size: 1.8rem;
+  color: #ffd166;
+  margin-bottom: 0.8rem;
+}
+
+.step-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #ff9f1c;
+}
+
+.step-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* CTA Button */
+.cta-button {
+  display: block;
+  margin: 3rem auto 0;
+  width: fit-content;
+  padding: 0.9rem 2.4rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(90deg, #ffd166, #ff9f1c);
+  color: #1e293b;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(255, 159, 28, 0.35);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .how-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .how-container h1 {
+    font-size: 2.1rem;
+  }
+
+  .ai-badge {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}

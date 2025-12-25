@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.Header {
+  height: 60vh;
+  width: 100%;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("https://applescoop.org/image/wallpapers/mac/cute-anime-minivan-camper-van-with-a-serene-cozy-relaxing-landscape-view-best-4k-desktop-wallpapers-backdrops-and-8k-backgrounds-12k-high-resolution-hd-of-2025-for-apple-mac-windows-pc-linux-chrome-10-03-2025-1741644478-hd-wallpaper.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 1rem;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+
+.Title {
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+
+  
+  color: #ffb703;
+
+  
+  background: linear-gradient(90deg, #ffd166, #ff9f1c);
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  
+  display: inline-block;
+
+  
+  color: transparent;
+}
+
+
+.sub-title {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .Header {
+    height: 50vh;
+  }
+
+  .Title {
+    letter-spacing: 1px;
+  }
+}
