@@ -71,12 +71,26 @@
 }
 
 
-@media (max-width: 768px) {
+/* =========================
+   MOBILE HEADER OPTIMIZATION
+   ========================= */
+
+@media (max-width: 480px) {
   .Header {
-    height: 50vh;
+    height: 34vh;               
+    padding: 0.75rem;
   }
 
   .Title {
-    letter-spacing: 1px;
+    font-size: 1.9rem;          
+    letter-spacing: 0.6px;
+    margin-bottom: 0.4rem;
+  }
+
+  .sub-title {
+    font-size: 0.95rem;
+    line-height: 1.35;
+    max-width: 90%;
   }
 }
+
