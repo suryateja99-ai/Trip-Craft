@@ -37,8 +37,9 @@
   gap: 1rem;
 }
 
-.input-group input {
-  padding: 0.9rem 1rem;
+.input-group input,
+.budget-select {
+  padding: 1rem;
   border-radius: 12px;
   border: none;
   outline: none;
@@ -49,6 +50,15 @@
 
 .input-group input::placeholder {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.budget-select {
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='white' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 7.5l4.5 4.5 4.5-4.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
 }
 
 .travel-card button {
@@ -62,17 +72,6 @@
   cursor: pointer;
   background: linear-gradient(90deg, #ffd166, #ff9f1c);
   color: #1e293b;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.travel-card button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(255, 159, 28, 0.35);
-}
-
-.travel-card button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
 }
 
 .loading {
@@ -95,7 +94,7 @@
 .day-card {
   background: rgba(0, 0, 0, 0.35);
   border-radius: 14px;
-  padding: 1rem 1.2rem;
+  padding: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -105,62 +104,22 @@
   color: #ff9f1c;
 }
 
-.day-card ul {
-  padding-left: 1rem;
-  margin-bottom: 0.6rem;
-}
-
 .day-card li {
+  font-size: 1.1rem;
   line-height: 1.5;
-  font-size: 1.2rem;
 }
 
 .costs {
   display: flex;
-  gap: 8.2rem;
-  font-size: 1.25rem;
-  font-weight: 500;
+  gap: 1rem;
+  font-size: 1.2rem;
   color: #ffd166;
-}
-
-.budget-select {
-  padding: 0.9rem 1rem;
-  border-radius: 12px;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  background: rgba(255, 255, 255, 0.12);
-  color: white;
-  appearance: none;
-  cursor: pointer;
-  position: relative;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='white' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 7.5l4.5 4.5 4.5-4.5'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  background-size: 1rem;
-}
-
-.budget-select option[value=""] {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.budget-select option {
-  background: #020617;
-  color: white;
-}
-
-.budget-select:hover {
-  background: rgba(255, 255, 255, 0.18);
-}
-
-.budget-select:focus {
-  box-shadow: 0 0 0 2px rgba(255, 209, 102, 0.6);
 }
 
 .error {
   margin-top: 1rem;
-  color: #ff6b6b;
   text-align: center;
+  color: #ff6b6b;
 }
 
 @media (max-width: 1024px) {
@@ -172,85 +131,25 @@
   }
 
   .travel-card {
-    position: relative;
-    width: 100%;
     max-width: 100%;
     height: 100dvh;
+    padding: 1rem;
     border-radius: 0;
-    padding: 1.5rem 1rem 2rem;
-    overflow-y: auto;
     box-shadow: none;
+    overflow-y: auto;
   }
 
   .travel-card h2 {
     position: sticky;
     top: 0;
-    background: linear-gradient(135deg, #0f172a, #020617);
     padding: 1rem 0;
-    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #0f172a, #020617);
     z-index: 10;
   }
 
-  .input-group input,
-  .budget-select {
-    min-height: 52px;
-    font-size: 1rem;
-  }
-
   .travel-card button {
-    min-height: 54px;
-    font-size: 1rem;
-    border-radius: 12px;
     position: sticky;
     bottom: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .travel-card {
-    padding: 1.25rem 0.9rem 2rem;
-  }
-
-  .trip-plan h3 {
-    font-size: 1.05rem;
-  }
-
-  .day-card h4 {
-    font-size: 1.1rem;
-  }
-
-  .day-card li {
-    font-size: 0.95rem;
-    line-height: 1.45;
-  }
-
-  .costs {
-    flex-direction: column;
-    gap: 0.4rem;
-    font-size: 1rem;
-  }
-
-  .loading,
-  .error {
-    font-size: 0.9rem;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-  .travel-card {
-    padding: 1.5rem;
-  }
-
-  .day-card h4 {
-    font-size: 1.25rem;
-  }
-
-  .day-card li {
-    font-size: 1rem;
-  }
-
-  .costs {
-    gap: 1rem;
-    font-size: 1.05rem;
+    border-radius: 12px;
   }
 }
