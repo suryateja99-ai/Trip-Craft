@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .body {
   min-height: 100vh;
   background: linear-gradient(135deg, #0f172a, #020617);
@@ -7,7 +13,6 @@
   padding: 2rem;
 }
 
-/* Card container */
 .travel-card {
   width: 100%;
   max-width: 700px;
@@ -19,7 +24,6 @@
   color: white;
 }
 
-/* Title */
 .travel-card h2 {
   text-align: center;
   margin-bottom: 1.8rem;
@@ -27,7 +31,6 @@
   font-weight: 600;
 }
 
-/* Input fields */
 .input-group {
   display: flex;
   flex-direction: column;
@@ -48,7 +51,6 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* Button */
 .travel-card button {
   width: 100%;
   margin-top: 1.5rem;
@@ -73,7 +75,6 @@
   cursor: not-allowed;
 }
 
-/* Loading */
 .loading {
   margin-top: 1rem;
   text-align: center;
@@ -81,7 +82,6 @@
   color: #ffd166;
 }
 
-/* Trip plan cards */
 .trip-plan {
   margin-top: 2rem;
 }
@@ -115,7 +115,6 @@
   font-size: 1.2rem;
 }
 
-/* Cost breakdown */
 .costs {
   display: flex;
   gap: 8.2rem;
@@ -124,7 +123,6 @@
   color: #ffd166;
 }
 
-/* Budget select dropdown */
 .budget-select {
   padding: 0.9rem 1rem;
   border-radius: 12px;
@@ -133,7 +131,7 @@
   font-size: 1rem;
   background: rgba(255, 255, 255, 0.12);
   color: white;
-  appearance: none; /* removes default arrow */
+  appearance: none;
   cursor: pointer;
   position: relative;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='white' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 7.5l4.5 4.5 4.5-4.5'/%3E%3C/svg%3E");
@@ -142,18 +140,15 @@
   background-size: 1rem;
 }
 
-/* Placeholder option */
 .budget-select option[value=""] {
   color: rgba(0, 0, 0, 0.6);
 }
 
-/* Dropdown options */
 .budget-select option {
   background: #020617;
   color: white;
 }
 
-/* Hover & focus states */
 .budget-select:hover {
   background: rgba(255, 255, 255, 0.18);
 }
@@ -162,38 +157,100 @@
   box-shadow: 0 0 0 2px rgba(255, 209, 102, 0.6);
 }
 
-
-/* Error message */
 .error {
   margin-top: 1rem;
   color: #ff6b6b;
   text-align: center;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .body {
-    min-height: auto;
-    padding: 1rem 0.75rem;
+    min-height: 100dvh;
+    padding: 0;
     align-items: stretch;
     justify-content: flex-start;
   }
 
   .travel-card {
+    position: relative;
     width: 100%;
     max-width: 100%;
-    margin-top: 0.5rem;
-    padding: 1.25rem 1rem;
-    border-radius: 14px;
+    height: 100dvh;
+    border-radius: 0;
+    padding: 1.5rem 1rem 2rem;
+    overflow-y: auto;
+    box-shadow: none;
+  }
+
+  .travel-card h2 {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    z-index: 10;
   }
 
   .input-group input,
   .budget-select {
-    min-height: 48px;
+    min-height: 52px;
     font-size: 1rem;
   }
 
   .travel-card button {
-    min-height: 50px;
+    min-height: 54px;
     font-size: 1rem;
+    border-radius: 12px;
+    position: sticky;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .travel-card {
+    padding: 1.25rem 0.9rem 2rem;
+  }
+
+  .trip-plan h3 {
+    font-size: 1.05rem;
+  }
+
+  .day-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .day-card li {
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  .costs {
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 1rem;
+  }
+
+  .loading,
+  .error {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .travel-card {
+    padding: 1.5rem;
+  }
+
+  .day-card h4 {
+    font-size: 1.25rem;
+  }
+
+  .day-card li {
+    font-size: 1rem;
+  }
+
+  .costs {
+    gap: 1rem;
+    font-size: 1.05rem;
   }
 }
