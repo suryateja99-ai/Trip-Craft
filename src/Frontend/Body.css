@@ -170,98 +170,30 @@
   text-align: center;
 }
 
-/* =========================
-   MOBILE FIRST OPTIMIZATION
-   ========================= */
-
 @media (max-width: 480px) {
   .body {
-    padding: 1rem;
-    align-items: flex-start;
+    min-height: auto;
+    padding: 1rem 0.75rem;
+    align-items: stretch;
+    justify-content: flex-start;
   }
 
   .travel-card {
-    padding: 1.25rem;
-    border-radius: 16px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0.5rem;
+    padding: 1.25rem 1rem;
+    border-radius: 14px;
   }
 
-  /* Title */
-  .travel-card h2 {
-    font-size: 1.6rem;
-    margin-bottom: 1.2rem;
-  }
-
-  /* Inputs */
   .input-group input,
   .budget-select {
-    font-size: 0.95rem;
-    padding: 0.85rem 0.9rem;
-    border-radius: 10px;
+    min-height: 48px;
+    font-size: 1rem;
   }
 
-  /* Button */
   .travel-card button {
-    padding: 0.9rem;
-    font-size: 0.95rem;
-    border-radius: 12px;
-  }
-
-  /* Trip plan */
-  .trip-plan {
-    margin-top: 1.5rem;
-  }
-
-  .trip-plan h3 {
-    font-size: 1.05rem;
-  }
-
-  .day-card {
-    padding: 0.9rem 1rem;
-    border-radius: 12px;
-  }
-
-  .day-card h4 {
-    font-size: 1.1rem;
-  }
-
-  .day-card li {
-    font-size: 0.95rem;
-    line-height: 1.45;
-  }
-
-  /* Cost section */
-  .costs {
-    flex-direction: column;
-    gap: 0.4rem;
+    min-height: 50px;
     font-size: 1rem;
-  }
-
-  /* Loading & error */
-  .loading,
-  .error {
-    font-size: 0.9rem;
-  }
-}
-
-/* =========================
-   SMALL TABLETS
-   ========================= */
-
-@media (min-width: 481px) and (max-width: 768px) {
-  .travel-card {
-    padding: 1.5rem;
-  }
-
-  .day-card h4 {
-    font-size: 1.25rem;
-  }
-
-  .day-card li {
-    font-size: 1rem;
-  }
-
-  .costs {
-    gap: 1rem;
-    font-size: 1.05rem;
   }
 }
