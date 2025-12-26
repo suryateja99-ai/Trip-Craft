@@ -63,7 +63,7 @@ Create a detailed day-by-day itinerary for a tourist.
 `;
 
     const bodyData = {
-      model: "GPT-OSS-120B",
+      model: "gpt-oss-120b",
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: `Plan my trip from ${from} to ${to} for ${days} days on budget level ${budget}.` },
